@@ -1,0 +1,1107 @@
+/* =====================================================
+   IMPORT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+
+    --primary:#336B87;
+    --secondary:#90AFC5;
+    --dark:#2A3132;
+    --accent:#763626;
+
+    --white:#ffffff;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:#f6f8fb;
+
+    color:var(--dark);
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--accent);
+
+}
+
+
+
+/* =====================================================
+   DEFAULT
+===================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    width:100%;
+
+    padding:18px 9%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    font-size:1.6rem;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+    letter-spacing:.5px;
+
+}
+
+.navbar-menu{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.navbar-menu a{
+
+    font-size:.97rem;
+
+    font-weight:400;
+
+    transition:.3s;
+
+}
+
+.navbar-menu a:hover{
+
+    color:var(--primary);
+
+}
+
+.navbar-menu a.active{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    height:70vh;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.45),
+
+    rgba(0,0,0,.45)
+
+    ),
+
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.hero-overlay{
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    color:white;
+
+    font-size:3rem;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+.hero p{
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:300;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    padding:70px 0;
+
+}
+
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+section{
+
+    margin-bottom:80px;
+
+}
+
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+h2{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+h3{
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+
+    color:var(--accent);
+
+    font-size:1.3rem;
+
+    font-weight:500;
+
+}
+
+h4{
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-size:1.05rem;
+
+    color:var(--dark);
+
+}
+
+
+
+/* =====================================================
+   PARAGRAPH
+===================================================== */
+
+p{
+
+    margin-bottom:18px;
+
+    text-align:justify;
+
+    color:#444;
+
+    font-weight:300;
+
+    font-size:1rem;
+
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    right:-320px;
+
+    width:320px;
+
+    height:100vh;
+
+    background:#ffffff;
+
+    box-shadow:-10px 0 35px rgba(0,0,0,.15);
+
+    padding:35px;
+
+    transition:.4s ease;
+
+    z-index:1000;
+
+}
+
+.sidebar.active{
+
+    right:0;
+
+}
+
+.sidebar h2{
+
+    margin-bottom:10px;
+
+}
+
+.sidebar hr{
+
+    border:none;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    margin:18px 0 28px;
+
+}
+
+.sidebar-content p{
+
+    margin-bottom:8px;
+
+}
+
+
+
+/* =====================================================
+   HAMBURGER BUTTON
+===================================================== */
+
+.menu-button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1.3rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.menu-button:hover{
+
+    background:var(--accent);
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* =====================================================
+   COUNTRY CARD
+===================================================== */
+
+.country{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.country:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+
+
+/* =====================================================
+   COUNTRY IMAGE
+===================================================== */
+
+.country img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    margin:25px 0;
+
+}
+
+
+
+/* =====================================================
+   COUNTRY LIST
+===================================================== */
+
+.country ul{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.country li{
+
+    background:#fafafa;
+
+    border-left:5px solid var(--secondary);
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.country li:hover{
+
+    background:#f1f6fa;
+
+    border-left-color:var(--primary);
+
+}
+
+
+
+/* =====================================================
+   CITY LINK
+===================================================== */
+
+.country li a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.country li a:hover{
+
+    color:var(--accent);
+
+    text-decoration:underline;
+
+}
+
+
+
+/* =====================================================
+   RANGKUMAN
+===================================================== */
+
+.rangkuman ol{
+
+    padding-left:28px;
+
+}
+
+.rangkuman li{
+
+    margin-bottom:10px;
+
+    font-weight:400;
+
+}
+
+
+
+/* =====================================================
+   PENUTUP
+===================================================== */
+
+.penutup{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* =====================================================
+   IKLAN
+===================================================== */
+
+.ads-section{
+
+    margin-top:80px;
+
+}
+
+#ads-container{
+
+    width:100%;
+
+    min-height:280px;
+
+    border:2px dashed var(--secondary);
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#777;
+
+    background:#fafafa;
+
+}
+
+#ads-container::before{
+
+    content:"Area Iklan";
+
+    font-size:1.2rem;
+
+    font-weight:500;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    margin-top:70px;
+
+    background:var(--dark);
+
+    color:white;
+
+    text-align:center;
+
+    padding:28px;
+
+}
+
+footer p{
+
+    color:white;
+
+    margin:0;
+
+    text-align:center;
+
+}
+
+
+
+/* =====================================================
+   TRANSITION
+===================================================== */
+
+a,
+button,
+.country,
+.country li,
+img{
+
+    transition:.3s ease;
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero,
+.country,
+.orientasi,
+.rangkuman,
+.penutup,
+.ads-section{
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+
+/* =====================================================
+   HOVER EFFECT
+===================================================== */
+
+.country img{
+
+    transition:transform .45s ease;
+
+}
+
+.country:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.logo{
+
+    transition:.3s;
+
+}
+
+.logo:hover{
+
+    color:var(--accent);
+
+}
+
+h2{
+
+    position:relative;
+
+    display:inline-block;
+
+    padding-bottom:8px;
+
+}
+
+h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:70px;
+
+    height:4px;
+
+    border-radius:20px;
+
+    background:var(--secondary);
+
+}
+
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+a:focus,
+button:focus{
+
+    outline:3px solid var(--secondary);
+
+    outline-offset:4px;
+
+}
+
+
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+    .navbar{
+
+        padding:18px 6%;
+
+    }
+
+    main{
+
+        width:92%;
+
+    }
+
+    .hero{
+
+        height:60vh;
+
+    }
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .country{
+
+        padding:28px;
+
+    }
+
+    .country img{
+
+        height:340px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:16px 5%;
+
+    }
+
+    .navbar-menu{
+
+        display:none;
+
+    }
+
+    .logo{
+
+        font-size:1.35rem;
+
+    }
+
+    .menu-button{
+
+        width:42px;
+        height:42px;
+
+    }
+
+    .hero{
+
+        height:55vh;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+        line-height:1.35;
+
+    }
+
+    .hero p{
+
+        font-size:.95rem;
+
+    }
+
+    main{
+
+        width:94%;
+
+        padding:50px 0;
+
+    }
+
+    section{
+
+        margin-bottom:60px;
+
+    }
+
+    .country{
+
+        padding:22px;
+
+    }
+
+    .country img{
+
+        height:240px;
+
+    }
+
+    h2{
+
+        font-size:1.6rem;
+
+    }
+
+    h3{
+
+        font-size:1.2rem;
+
+    }
+
+    h4{
+
+        font-size:1rem;
+
+    }
+
+    p{
+
+        font-size:.95rem;
+
+    }
+
+    .sidebar{
+
+        width:260px;
+
+        right:-260px;
+
+        padding:25px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:1.65rem;
+
+    }
+
+    .hero p{
+
+        font-size:.9rem;
+
+    }
+
+    .country{
+
+        padding:18px;
+
+    }
+
+    .country img{
+
+        height:200px;
+
+    }
+
+    h2{
+
+        font-size:1.4rem;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   DESKTOP LARGE
+===================================================== */
+
+@media (min-width:1400px){
+
+    main{
+
+        max-width:1300px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   PERFORMANCE
+===================================================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+html{
+
+    overflow-x:hidden;
+
+}
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+   ADS
+========================================== */
+
+.ads-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.ad-box{
+
+    min-height:280px;
+
+    border:2px dashed var(--secondary);
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#fafafa;
+
+    transition:.3s;
+
+}
+
+.ad-box:hover{
+
+    border-color:var(--primary);
+
+    background:#f5faff;
+
+}
+
+.ad-box p{
+
+    color:#888;
+
+    font-weight:500;
+
+    margin:0;
+
+}
+
